@@ -1,2 +1,1 @@
-"# Typo-App" 
-"# Typo-App" 
+Typo App
