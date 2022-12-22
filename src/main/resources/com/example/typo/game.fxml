@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="940.0" style="-fx-background-color: #434343; -fx-border-color: #e5a920; -fx-border-width: 5px;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.typo.TypoLogic">
+    <Circle fill="WHITE" layoutX="214.0" layoutY="140.0" radius="41.0" stroke="#e5a920" strokeType="INSIDE" strokeWidth="3.0" />
+    <Text fx:id="seconds" layoutX="193.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="42.64990234375">
+        <font>
+            <Font name="Calibri" size="31.0" />
+        </font>
+    </Text>
+    <Text layoutX="193.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="seconds">
+        <font>
+            <Font name="Calibri" size="13.0" />
+        </font>
+    </Text>
+    <Text fill="WHITE" layoutX="434.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="words/min">
+        <font>
+            <Font name="Calibri" size="13.0" />
+        </font>
+    </Text>
+    <Text fill="WHITE" layoutX="632.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\% accuracy">
+        <font>
+            <Font name="Calibri" size="13.0" />
+        </font>
+    </Text>
+    <Text fx:id="wordsPerMin" fill="#fbff00" layoutX="442.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="42.64990234375">
+        <font>
+            <Font name="Calibri" size="32.0" />
+        </font>
+    </Text>
+    <Text fx:id="accuracy" fill="#fbff00" layoutX="637.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="49.0">
+        <font>
+            <Font name="Calibri" size="32.0" />
+        </font>
+    </Text>
+    <TextField fx:id="userWord" alignment="CENTER" layoutX="356.0" layoutY="504.0" onKeyPressed="#startgame" prefHeight="62.0" prefWidth="214.0" style="-fx-text-fill: #ED2939;">
+        <font>
+            <Font name="Calibri" size="26.0" />
+        </font>
+    </TextField>
+    <ImageView fx:id="correct" fitHeight="51.0" fitWidth="49.0" layoutX="284.0" layoutY="302.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+
+    </ImageView>
+    <ImageView fx:id="wrong" fitHeight="51.0" fitWidth="49.0" layoutX="284.0" layoutY="302.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+    </ImageView>
+    <FlowPane fx:id="flowtop" alignment="CENTER_LEFT" layoutX="12.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="62.0" prefWidth="915.0" prefWrapLength="100.0" rowValignment="TOP" style="-fx-background-color: #ebebeb;">
+        <Button fx:id="options" onAction="#underdev" prefHeight="44.0" prefWidth="68.0" text="Options" translateX="8.0" />
+        <Button fx:id="settings" onAction="#settings" prefHeight="44.0" prefWidth="99.0" text="Reset Password">
+            <FlowPane.margin>
+                <Insets left="16.0" />
+            </FlowPane.margin>
+        </Button>
+        <TextArea editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="70.0" style="-fx-background-color: #000000;" text="TYPO" translateX="234.0">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </TextArea>
+        <Button fx:id="home" onAction="#underdev" prefHeight="44.0" prefWidth="68.0" text="Help" translateX="502.0" />
+        <Button fx:id="profile" onAction="#display" prefHeight="44.0" prefWidth="68.0" text="Profiles" translateX="514.0" />
+    </FlowPane>
+    <FlowPane fx:id="flowbottom" alignment="CENTER" layoutX="12.0" layoutY="613.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="62.0" prefWidth="915.0" prefWrapLength="100.0" rowValignment="TOP" style="-fx-background-color: #ebebeb;">
+        <Button fx:id="playAgain" mnemonicParsing="false" onAction="#playagain" prefHeight="48.0" prefWidth="86.0" text="Play Again" />
+    </FlowPane>
+    <TextArea fx:id="textarea" editable="false" layoutX="62.0" layoutY="188.0" prefHeight="279.0" prefWidth="802.0" style="-fx-background-color: #000;" styleClass="" wrapText="true">
+        <font>
+          <Font size="21.0" />
+        </font>
+    </TextArea>
+   <Text fx:id="programWord" fill="#36ae40" layoutX="627.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="250.64990234375">
+      <font>
+         <Font name="Calibri" size="26.0" />
+      </font>
+   </Text>
+   <Text fx:id="programWord1" fill="WHITE" layoutX="627.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Word" textAlignment="CENTER" wrappingWidth="250.64990234375">
+      <font>
+         <Font name="Calibri" size="16.0" />
+      </font>
+   </Text>
+</AnchorPane>

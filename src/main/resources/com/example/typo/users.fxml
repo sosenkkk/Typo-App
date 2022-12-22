@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" prefHeight="562.0" prefWidth="647.0" vgap="10" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.typo.Users">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <Pane fx:id="Pane" prefHeight="562.0" prefWidth="647.0" style="-fx-background-color: #434343;" styleClass="Pane" stylesheets="@Css/firstpage.css">
+        <effect>
+            <DropShadow />
+        </effect>
+        <Text fill="WHITE" layoutX="53.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users:-" wrappingWidth="113.05975341796875">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Text>
+        <Text fx:id="userlist" fill="WHITE" layoutX="53.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="113.05975341796875">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+        <Button fx:id="disall" layoutX="520.0" layoutY="46.0" mnemonicParsing="false" onAction="#displayall" prefHeight="27.0" prefWidth="95.0" text="Display all" />
+      <Button fx:id="backtologin" layoutX="520.0" layoutY="97.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="95.0" text="Back to Game" />
+      <Button fx:id="disall1" layoutX="439.0" layoutY="182.0" mnemonicParsing="false" onAction="#displayall" prefHeight="27.0" prefWidth="176.0" text="Display By ID" />
+      <Text layoutX="423.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter ID" wrappingWidth="59.7366943359375" />
+      <TextArea fx:id="ID" layoutX="502.0" layoutY="223.0" onKeyPressed="#displaybyid" prefHeight="8.0" prefWidth="77.0" text="" />
+    </Pane>
+</GridPane>
